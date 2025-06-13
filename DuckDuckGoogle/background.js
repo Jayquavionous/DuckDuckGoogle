@@ -5,7 +5,7 @@ browser.browserAction.onClicked.addListener((tab) => {
   const q = url.searchParams.get("q");
 
   if (q) {
-    const google = "https://www.google.com/search?q=" + encodeURIComponent(query);
+    const google = "https://www.google.com/search?q=" + encodeURIComponent(q);
     browser.tabs.update(tab.id, { url: google });
   }
 });
